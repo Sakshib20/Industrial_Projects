@@ -1,13 +1,24 @@
-# 🗜️ File Packer & Unpacker With Encryption
+# 🔒 SecurePack: Industrial Data Integrity & Archival System
 
-A command-line Java utility that merges multiple files into a single encrypted archive to save disk space and transport data efficiently, complete with a dedicated extraction module.
+**SecurePack** is a Java-based security utility engineered for high-performance data aggregation and secure archival. It focuses on maintaining **System Security** by packing distributed files into an authenticated, encrypted archive while preserving critical metadata.
 
-## 🚀 Core Features
-* **Pack & Extract:** Combine an entire directory of files into one custom archive, and extract them back to their original state.
-* **Metadata Intact:** Automatically preserves original file names and exact byte sizes inside a custom file header.
-* **Highly Secure:** Encrypts file data during packing and validates data integrity using **MD5 Checksums** and **Magic Number** authentication before unpacking.
+## 🚀 Key Security & System Features
 
-## 🛠️ Tech Stack
-* **Language:** Core Java
-* **Interface:** Command-Line (CUI)
-* **Core Concepts:** File I/O, Byte Streams, Cryptography, Hashing
+* **Advanced Data Integrity:** Implements **MD5 Checksum** validation to ensure zero bit-loss and verify data consistency during the transmission lifecycle.
+* **Authentication Layer:** Integrated **Magic Number** verification to authenticate archive headers, preventing unauthorized system access or data injection.
+* **Metadata Orchestration:** Automatically preserves file attributes, headers, and exact byte-offsets within a custom-defined system architecture.
+* **Encrypted Serialization:** Securely packs entire directory structures into encrypted byte-streams, optimizing storage and ensuring secure data transport.
+
+## 🛠️ Technology Stack
+
+* **Language:** Core Java (JDK 17+)
+* **Security Integration:** MD5 Hashing, Magic Number Authentication, Custom Encryption
+* **Core Systems:** Java File I/O, Byte Stream Manipulation, RandomAccessFile
+* **Interface:** Command-Line Interface (CUI)
+
+## ⚙️ Deployment & Execution
+
+1. **Build Module:** `javac Packer.java Unpacker.java`
+2. **System Aggregation (Pack):** `java Packer <Directory_Path> <Archive_Name>`
+3. **System Extraction (Unpack):** `java Unpacker <Archive_Name>`
+4. **Verification:** The system automatically executes a checksum validation to ensure archive integrity before extraction.
